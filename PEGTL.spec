@@ -13,6 +13,8 @@ BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.605
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_enable_debug_packages	0
+
 %description
 The Parsing Expression Grammar Template Library (PEGTL) is a
 zero-dependency C++ header-only parser combinator library for creating
