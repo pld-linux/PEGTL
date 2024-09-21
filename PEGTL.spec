@@ -1,35 +1,47 @@
 Summary:	Parsing Expression Grammar Template Library
+Summary(pl.UTF-8):	Parsing Expression Grammar Template Library - biblioteka szablonów do analizy wyrażeń
 Name:		PEGTL
-Version:	3.2.7
+Version:	3.2.8
 Release:	1
 License:	Boost v1.0
 Group:		Libraries
 Source0:	https://github.com/taocpp/PEGTL/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	31b14660c883bc0489ddcdfbd29199c9
+# Source0-md5:	50339029d1bb037909b28c382214033e
 URL:		https://github.com/taocpp/PEGTL
 BuildRequires:	cmake >= 3.8
 BuildRequires:	libstdc++-devel >= 6:8
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.605
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_enable_debug_packages	0
 
 %description
 The Parsing Expression Grammar Template Library (PEGTL) is a
 zero-dependency C++ header-only parser combinator library for creating
 parsers according to a Parsing Expression Grammar (PEG).
 
+%description -l pl.UTF-8
+PEGTL (Parsing Expression Grammar Template Library) to nie mająca
+zależności zewnętrznych, składająca się z samych nagłówków biblioteka
+łączenia parserów, przeznaczona do tworzenia parserów zgodnie z PEG
+(Parsing Expression Grammar - gramatyką analizy wyrażeń).
+
 %package devel
 Summary:	Parsing Expression Grammar Template Library
+Summary(pl.UTF-8):	Parsing Expression Grammar Template Library - biblioteka szablonów do analizy wyrażeń
 Group:		Development/Libraries
 Requires:	libstdc++-devel >= 6:8
-BuildArch:	noarch
 
 %description devel
 The Parsing Expression Grammar Template Library (PEGTL) is a
 zero-dependency C++ header-only parser combinator library for creating
 parsers according to a Parsing Expression Grammar (PEG).
+
+%description devel -l pl.UTF-8
+PEGTL (Parsing Expression Grammar Template Library) to nie mająca
+zależności zewnętrznych, składająca się z samych nagłówków biblioteka
+łączenia parserów, przeznaczona do tworzenia parserów zgodnie z PEG
+(Parsing Expression Grammar - gramatyką analizy wyrażeń).
 
 %prep
 %setup -q
